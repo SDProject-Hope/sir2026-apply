@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2026 사회적가치투자 SIR대회 소셜투자자 신청</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Rubik:wght@900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f1;--surface:#fff;--ink:#1a2320;--mute:#5d6b66;--line:#d6ddd8;--brand:#0e4a43;--brand-ink:#fff;--coin:#e2a421;--coin-ink:#2b1f00;--err:#b3261e;--soft:#e4ede9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1815;--surface:#17221f;--ink:#e8efec;--mute:#9db0a9;--line:#2b3b36;--brand:#6fd1bf;--brand-ink:#08211c;--coin:#f0b73a;--err:#ff8a80;--soft:#1f2f2a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1815;--surface:#17221f;--ink:#e8efec;--mute:#9db0a9;--line:#2b3b36;--brand:#6fd1bf;--brand-ink:#08211c;--coin:#f0b73a;--err:#ff8a80;--soft:#1f2f2a;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.7 "Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+h1,h2{font-family:"Noto Serif KR",Georgia,"Apple SD Gothic Neo",serif;margin:0}
+.hero{background:var(--brand);color:var(--brand-ink);padding:56px 0 48px}
+.hero small{display:block;font-size:14px;opacity:.85;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6.4vw,44px);line-height:1.25;font-weight:900;letter-spacing:-.02em}
+.hero p{margin:16px 0 0;max-width:34em;opacity:.92}
+.purse{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;align-items:center}
+.coin{width:84px;height:84px;border-radius:50%;background:var(--coin);color:var(--coin-ink);display:grid;place-items:center;text-align:center;font-weight:700;line-height:1.15;border:3px dashed rgba(43,31,0,.35);outline:4px solid var(--coin);outline-offset:-1px}
+.coin b{display:block;font-size:22px;font-family:"Noto Serif KR",serif}
+.coin span{font-size:11px}
+.purse .eq{font-size:26px;opacity:.8}
+.total{font-size:15px}.total b{display:block;font-size:28px;font-family:"Noto Serif KR",serif}
+main{padding:28px 0 72px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 22px;margin-bottom:20px}
+.card h2{font-size:20px;margin-bottom:6px}
+.steps{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px 1fr;gap:12px}
+.steps i{font-style:normal;width:32px;height:32px;border-radius:50%;background:var(--soft);color:var(--brand);font-weight:700;display:grid;place-items:center}
+dl{margin:12px 0 0;display:grid;grid-template-columns:5.5em 1fr;gap:6px 12px}
+dt{color:var(--mute)}dd{margin:0}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.dates div{background:var(--soft);border-radius:10px;padding:12px 14px;font-size:15px}
+.dates b{display:block;color:var(--brand)}
+.dates .on{outline:2px solid var(--brand)}
+.quote{margin:18px 0 0;color:var(--mute);font-size:15px}
+.sec{font-size:13px;color:var(--mute);margin:34px 0 10px;font-weight:500}
+.sec h2{font-size:22px;color:var(--ink);margin-top:2px}
+.sec p{margin:4px 0 0;font-size:14px}
+fieldset.q{border:0;margin:0 0 20px;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px;min-width:0}
+fieldset.q.err{border-color:var(--err);box-shadow:0 0 0 1px var(--err)}
+legend{padding:0;font-weight:700;font-size:16px;float:left;width:100%;margin-bottom:4px;line-height:1.5}
+legend+*{clear:both}
+.req{color:var(--err);margin-left:4px}
+.hint{display:block;font-weight:400;font-size:13.5px;color:var(--mute);margin-top:2px}
+.msg{color:var(--err);font-size:13.5px;margin-top:8px;display:none}
+.err .msg{display:block}
+.detail{margin:10px 0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.detail summary{cursor:pointer;padding:10px 14px;font-size:14px;font-weight:500}
+.detail div{padding:0 14px 12px;font-size:13.5px;color:var(--mute);line-height:1.75}
+.detail div p{margin:6px 0}
+.detail strong{color:var(--ink);font-weight:500}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 4px;cursor:pointer;border-radius:8px}
+.opt:hover{background:var(--soft)}
+.opt input{margin:5px 0 0;width:18px;height:18px;accent-color:var(--brand);flex:none}
+.opt.off{opacity:.45;cursor:not-allowed}
+.opt .o{flex:1}
+.oth{margin:2px 0 4px 32px;display:none}
+.oth.show{display:block}
+input[type=text],input[type=tel],input[type=email],textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-top:10px}
+textarea{min-height:96px;resize:vertical}
+input:focus-visible,textarea:focus-visible,button:focus-visible,summary:focus-visible,.pill input:focus-visible+span{outline:3px solid var(--coin);outline-offset:2px}
+.counter{font-size:13px;color:var(--mute);margin-top:6px}
+.lk{padding:14px 0;border-top:1px solid var(--line)}
+.lk:first-of-type{border-top:0}
+.lk p{margin:0 0 10px}
+.pills{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.pill span{display:block;text-align:center;padding:10px 0;border:1px solid var(--line);border-radius:10px;font-weight:500;background:var(--bg)}
+.pill input:checked+span{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.ends{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mute);margin-top:5px}
+.submit{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:28px}
+button.go{font:700 17px "Noto Sans KR",sans-serif;background:var(--brand);color:var(--brand-ink);border:0;border-radius:12px;padding:15px 34px;cursor:pointer}
+button.go:hover{filter:brightness(1.08)}
+.submit span{font-size:13.5px;color:var(--mute)}
+.done{display:none;text-align:center;padding:48px 20px}
+.done .coin{margin:0 auto 18px}
+.done h2{font-size:26px;margin-bottom:10px}
+.done p{max-width:30em;margin:6px auto;color:var(--mute)}
+.stop{display:none;margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--soft);font-size:14px}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:0 20px 40px}
+@media (max-width:520px){.card,fieldset.q{padding:18px 16px}dl{grid-template-columns:4.6em 1fr}.coin{width:72px;height:72px}}
+@media (prefers-reduced-motion:no-preference){.done.show .coin{animation:pop .5s ease-out}@keyframes pop{from{transform:scale(.6) rotate(-20deg);opacity:0}to{transform:none;opacity:1}}}
+:root{--bg:#fdf5de;--surface:#fffaea;--ink:#231d10;--mute:#6b5f45;--line:#e6d5a8;--brand:#07803a;--brand-ink:#fff;--coin:#c8a063;--coin-ink:#2a1d05;--soft:#f3e7c4;--tan:#c8a063;--orange:#e8570a;--mint:#cfe5c6;--err:#b3261e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150e;--surface:#211e14;--ink:#f4ecd6;--mute:#b9ad8e;--line:#3d3724;--brand:#46c978;--brand-ink:#08200f;--coin:#d4ad6d;--soft:#2b271a;--tan:#d4ad6d;--mint:#1d3a26;--err:#ff8a80}}
+:root[data-theme="dark"]{--bg:#17150e;--surface:#211e14;--ink:#f4ecd6;--mute:#b9ad8e;--line:#3d3724;--brand:#46c978;--brand-ink:#08200f;--coin:#d4ad6d;--soft:#2b271a;--tan:#d4ad6d;--mint:#1d3a26;--err:#ff8a80}
+h1,h2{font-family:"Noto Sans KR",system-ui,sans-serif;font-weight:900;letter-spacing:-.03em}
+.hero{background:var(--bg);color:var(--ink);padding:0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--mint);right:-230px;top:150px}
+.hero .wrap{position:relative;padding:48px 20px 30px}
+.ribbon{position:absolute;z-index:2;top:0;right:0;width:132px;height:132px;background:var(--orange);clip-path:polygon(0 0,100% 0,100% 100%)}
+.ribbon span{position:absolute;top:34px;right:-4px;width:84px;text-align:center;transform:rotate(45deg);color:#fff;font-weight:900;font-size:15px}
+.big{font:900 clamp(92px,27vw,176px)/.88 Rubik,"Noto Sans KR",sans-serif;color:var(--tan);letter-spacing:-.05em}
+.big .dot{display:inline-block;width:.17em;height:.17em;border-radius:50%;background:var(--brand);margin-left:.06em}
+.big .star{display:inline-block;width:.36em;height:.36em;fill:var(--brand);margin-left:.1em;vertical-align:.5em}
+.hero h1.sub{font-size:clamp(26px,6.2vw,40px);line-height:1.25;margin-top:20px}
+.sub .t{color:var(--tan)}.sub .g{color:var(--brand)}
+.hero p{opacity:1;color:var(--ink)}
+.hero>.rule{width:calc(100% - 40px);max-width:680px;margin:0 auto;height:2px;background:var(--tan);position:relative}
+.rule::before,.rule::after{content:"";position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--tan)}
+.rule::before{left:-4px}.rule::after{right:-4px}
+.hero .coin{background:var(--coin);color:var(--coin-ink)}
+.coin b,.total b{font-family:Rubik,"Noto Sans KR",sans-serif;font-weight:900}
+.total b{color:var(--brand)}
+.purse .eq{color:var(--tan);opacity:1}
+.card,fieldset.q{border-radius:24px;background:var(--surface)}
+.card h2{color:var(--brand)}
+.steps i{background:var(--brand);color:var(--brand-ink)}
+.dates div{border-radius:16px}
+button.go{border-radius:999px}
+footer{background:var(--brand);color:var(--brand-ink);padding:22px 20px 26px;line-height:1.8}
+footer a{color:inherit}
+.no{display:inline-grid;place-items:center;min-width:24px;height:24px;margin-right:8px;border-radius:50%;background:var(--soft);color:var(--brand);font-size:13px;font-weight:700}
+main.wrap{padding:28px 20px 88px}
+button.go{background:var(--orange);color:#fff}
+</style>
+</head>
+<body>
+<header class="hero"><div class="ribbon"><span>신청링크</span></div>
+  <div class="wrap">
+    <div class="big" role="img" aria-label="2026 SIR">2026<br>SIR<i class="dot"></i><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0Q13 11 24 12Q13 13 12 24Q11 13 0 12Q11 11 12 0Z"/></svg></div>
+    <h1 class="sub"><span class="t">사회적가치투자 SIR대회</span><br><span class="g">소셜투자자로 참여하기</span></h1>
+    <p>소셜디자이너의 제안을 듣고, 묻고, 모의투자로 지지해 주세요. 응원은 흔적을 남기지만, 투자는 변화를 남깁니다.</p>
+    <div class="purse" aria-label="입장 시 지급되는 임팩트코인">
+      <div class="coin"><div><b>100</b><span>만원 · 청년</span></div></div>
+      <div class="eq">+</div>
+      <div class="coin"><div><b>100</b><span>만원 · 지역소멸</span></div></div>
+      <div class="eq">=</div>
+      <div class="total">입장 시 모바일로 지급<b>임팩트코인 200만원</b></div>
+    </div>
+  </div>
+<div class="rule"></div></header>
+
+<main class="wrap">
+  <section class="card">
+    <h2>소셜투자자란?</h2>
+    <p>SIR대회에서 지역·사회문제를 해결하는 소셜디자이너의 제안을 듣고, 묻고, 모의투자로 지지하는 시민입니다.</p>
+    <ol class="steps">
+      <li><i>1</i><div>입장 시 총 200만원의 임팩트코인이 모바일로 지급됩니다. (청년 트랙 100만원 / 지역소멸 대응 트랙 100만원)</div></li>
+      <li><i>2</i><div>각 트랙에서 최대 3개 팀에 10만원 단위로 직접 투자합니다.</div></li>
+      <li><i>3</i><div>소셜투자자 200명의 투자 비율만큼 총 상금에서 실제 투자금으로 소셜디자이너에게 지급합니다.</div></li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>행사 안내</h2>
+    <dl>
+      <dt>일시</dt><dd><b>2026.12.09.(수)</b><br>13:00 체크인/전시 · 14:00 본 대회 시작</dd>
+      <dt>장소</dt><dd><b>대한상공회의소 국제회의장</b><br>서울특별시 중구 세종대로 39, B2</dd>
+      <dt>참가비</dt><dd><b>무료</b></dd>
+      <dt>모집</dt><dd><b>200명 (선착순)</b></dd>
+    </dl>
+    <div class="dates">
+      <div class="on" style="grid-column:1/-1">모집 마감 이후 신청자는 대기 명단에 등록되며, 취소 인원이 발생할 경우 순서대로 참여 안내를 드립니다.</div>
+      
+    </div>
+  </section>
+
+  <form id="f" novalidate>
+    <div id="out"></div>
+    <div class="submit">
+      <button class="go" type="submit">제출하기</button>
+      <span>필수 항목은 <span class="req" style="margin:0">*</span> 로 표시되어 있습니다.</span>
+    </div>
+    <div class="msg" id="formmsg" role="alert" style="margin-top:12px"></div>
+  </form>
+
+  <section class="card done" id="done" aria-live="polite">
+    <div class="coin"><div><b>OK</b><span>신청 완료</span></div></div>
+    <h2 id="doneh">신청해주셔서 감사합니다!</h2>
+    <p>이후 행사 소식과 출전 소셜디자이너 정보를 이메일 또는 문자로 발신드릴 예정입니다.</p>
+    <p style="color:var(--ink);font-weight:700;font-size:18px;margin-top:22px">세상을 바꿀 100만원이 여러분을 기다리고 있어요!🪙</p>
+    <p style="color:var(--ink);font-weight:700;font-size:18px">12월 9일 수요일, 대한상공회의소에서 만나요!</p><p style="font-size:14px;margin-top:22px">✅ 부득이하게 불참할 경우, 대기 중인 분들께 소중한 기회가 이어질 수 있도록 빠른 시일 내로 사회혁신팀에 연락 주시길 부탁드립니다.</p><p style="font-size:14px">*문의 : 최나현 사회혁신팀 선임연구원 (<a href="mailto:trami@makehope.org" style="color:var(--brand)">trami@makehope.org</a>, 02-6395-1433)</p>
+  </section>
+</main>
+<footer><b>문의</b> 최나현 사회혁신팀 선임연구원 | <a href="mailto:trami@makehope.org">trami@makehope.org</a> | 02-6395-1433<br>희망제작소 · 2026 사회적가치투자 SIR대회</footer>
+
+<script>
+const API_URL="https://script.google.com/macros/s/AKfycbwKpiXqp9J6W977BlV0_VYX7vdK7SXyBb3JBAuFGiCGkLH3SetSGZRX_Vb1m0SIoeq9/exec";
+const AGREE=["동의합니다","동의하지 않습니다"];
+const S=[
+ {t:"동의 확인",d:"신청 전에 아래 내용을 확인하고 동의 여부를 선택해 주세요."},
+ {id:"c1",label:"개인정보 수집 및 이용 동의",type:"radio",req:1,opts:["동의합니다","동의하지 않습니다 (신청 불가)"],block:1,
+  detail:"<p>희망제작소는 「개인정보 보호법」 등 관련 법령에 따라 2026 사회적가치투자 SIR대회의 신청·운영 및 참여 경험 분석을 위해 개인정보를 수집·이용합니다.</p><p><strong>목적</strong> 참가 신청 및 본인 확인, 행사 안내·운영, 모의투자 참여 확인, 사전·사후 설문 및 투자 기록 연계, 사업 평가·연구·결과보고</p><p><strong>항목</strong> 이름, 소속, 휴대폰 번호, 이메일, 연령대, 성별, 생활·활동 지역, 일·활동 영역, 사회문제 해결 활동 관련 정보, 사전·사후 설문 응답, 모의투자 내역 및 관련 응답</p><p><strong>보유·이용 기간</strong> 수집일로부터 3년<br>보유기간 종료 후 개인식별정보는 파기하며, 개인을 식별할 수 없도록 처리한 통계·분석 결과는 연구 및 성과 기록에 활용할 수 있습니다.</p><p><strong>동의 거부 안내</strong> 개인정보 수집·이용에 동의하지 않을 권리가 있으나, 위 정보는 행사 신청·운영 및 모의투자 참여에 필요한 정보이므로 동의하지 않을 경우 참가 신청이 제한됩니다.</p><p><strong>개인정보관리책임자</strong> 희망제작소 경영기획국장 송정복 (02-6395-1423)</p>"},
+ {id:"c2",label:"행사 현장 사진·영상 촬영 및 활용 동의",type:"radio",req:1,opts:AGREE,
+  detail:"<p>희망제작소는 2026 사회적가치투자 SIR대회의 기록과 활동 소개를 위해 행사 현장에서 사진·영상을 촬영하고 활용합니다.</p><p><strong>목적</strong> 행사 기록 및 결과보고, 희망제작소 홈페이지·뉴스레터·SNS, SIR대회·소셜디자이너 관련 콘텐츠 및 사업 홍보</p><p><strong>항목</strong> 행사 현장에서 촬영된 참여자의 사진 및 영상</p><p><strong>보유·이용 기간</strong> 이용 목적 달성 시까지 또는 삭제·이용 중단 요청 시까지</p><p><strong>동의 거부 안내</strong> 동의하지 않더라도 행사 참여에는 불이익이 없습니다. 미동의자는 행사 당일 별도 표식으로 구분하여 개인 식별 촬영 및 외부 활용을 피하도록 운영합니다.</p>"},
+ {id:"c3",label:"희망제작소 활동 및 행사 소식 수신 동의",type:"radio",req:1,opts:AGREE,
+  detail:"<p><strong>목적</strong> 희망제작소의 소셜디자이너·SIR대회 및 관련 사업, 행사, 참여 기회 안내</p><p><strong>항목</strong> 이름, 휴대폰 번호, 이메일</p><p><strong>보유·이용 기간</strong> 동의 철회 시까지</p><p><strong>동의 거부 안내</strong> 동의하지 않더라도 SIR대회 참여에는 불이익이 없습니다.</p>"},
+ {t:"기본 참여자 정보",d:"SIR대회에 관한 사전 안내와 자료를 보내드립니다. 휴대폰 번호는 행사 당일 투자 화면 로그인과 행사 후 설문을 이어주는 번호입니다. 제출 전 한 번 더 확인해 주세요."},
+ {id:"name",label:"이름(또는 별명)",hint:"행사장에서 제공되는 참석자 명찰(이름표)에 표기됩니다.",type:"text",req:1},
+ {id:"org",label:"소속",hint:"명찰에 표기됩니다. 표기를 원하지 않으시면 “표기 안 함”이라고 적어주세요.",type:"text",req:1},
+ {id:"tel",label:"휴대폰 번호",hint:"010-0000-0000 형식으로 입력해 주세요. 행사 안내, 투자 화면 로그인, 사전·사후 설문 및 투자 기록 연결에 사용됩니다.",type:"tel",req:1,ph:"010-0000-0000"},
+ {id:"mail",label:"이메일 주소",hint:"행사 안내 및 참가 확정 메일 발송에 사용되니 정확히 입력해 주세요.",type:"email",req:1,ph:"name@example.com"},
+ {id:"age",label:"연령대",hint:"평가 및 개선 지점에 반영하기 위한 질문입니다.",type:"radio",req:1,opts:["10대","20대","30대","40대","50대","60대 이상"]},
+ {id:"gender",label:"지정 성별",hint:"평가 및 개선 지점에 반영하기 위한 질문입니다.",type:"radio",req:1,opts:["여성","남성","응답을 원하지 않음"],other:1},
+ {id:"region",label:"현재 주로 거주(또는 활동, 일)하는 지역",type:"radio",req:1,opts:["서울","경기","강원","인천","대전","세종","대구","울산","부산","충북","충남","전북","전남광주","경북","경남","제주","국외"],cols:1},
+ {id:"field",label:"일/활동 분야·영역",hint:"여러 항목에 해당된다면, 현재 주로 하시는 업무와 가장 가까운 항목을 선택해 주세요.",type:"radio",req:1,other:1,opts:["사회적경제 / 소셜벤처 (사회적기업, 소셜벤처, 협동조합, 마을기업 등)","비영리 / NGO / 비영리스타트업 (사단/재단법인, 국제개발협력 등)","공공·행정기관 / 중간지원조직 (정부, 지자체 / 청년·도시재생·창업지원센터 등)","기업 CSR / ESG","금융 / 기금 / 투자 / 창업 (은행, VC, AC, 임팩트펀드/투자사, 컨설팅 등)","교육 / 연구 / 미디어 (교수 / 연구원 / 언론사 등)","학생 / 청소년 (초·중·고·대학(원)생)","1인 사업자 / 프리랜서 / 구직 / 예비창업 중"]},
+ {t:"인식 조사 및 경로 파악",d:"아래 질문에는 정답이 없습니다. SIR대회에 참여하기 전, 지금 생각하고 있는 그대로를 답해주세요. 생각과 선택의 변화를 확인하기 위해 일부 질문은 행사 후 다시 한 번 질문할 예정입니다."},
+ {id:"likert",label:"아래 문장에 얼마나 동의하시나요?",type:"likert",req:1,rows:["복잡한 지역·사회문제라도 여러 주체의 시도와 협력을 통해 개선될 수 있다고 생각한다.","시민의 선택과 참여가 지역·사회문제 해결에 실제로 영향을 줄 수 있다고 생각한다.","지역·사회문제를 해결하는 과정에는 문제를 겪는 당사자와 시민의 참여가 중요하다고 생각한다.","어떤 소셜디자이너를 응원할지 나만의 기준과 이유를 설명할 수 있다.","앞으로 지역·사회문제를 해결하는 활동에 직접 참여해보고 싶다.","의미 있다고 생각하는 활동이 계속되도록 내가 가진 자원을 보탤 의향이 있다."]},
+ {id:"key",label:"지역·사회문제를 해결하는 활동에 투자를 한다면, 어떤 점을 가장 중요하게 고려하시나요?",type:"radio",req:1,opts:["[공감] 다루는 문제가 내 삶과 고민에 닿아 있다고 느끼는가","[참여] 이런 방식이라면 나도 참여해 배우고 힘을 보태고 싶은가","[지역] 이런 시도가 내 지역·동네에서도 시작되길 바라는가","[지속] 이 활동과 가치가 꾸준히 이어지도록 지지하고 싶은가","[학습] 이 활동을 통해 새로운 관점과 아이디어를 발견할 수 있는가"]},
+ {id:"cond",label:"앞으로 내가 살아가고 싶은 지역·사회에서 중요하다고 생각하는 조건은 무엇인가요? (최대 3개)",hint:"정답은 없습니다. 행사가 끝난 뒤 같은 질문을 한 번 더 드립니다.",type:"check",req:1,max:3,other:1,opts:["이웃과 안부를 묻고 서로 도울 수 있는 관계","아프거나 나이가 들어도 필요한 도움을 받을 수 있는 돌봄·건강 안전망","지역에서 일하며 살아갈 수 있는 일자리와 소득","아이와 청년이 머물며 성장할 수 있는 배움과 기회","병원·장보기·교통 등 일상을 이어갈 수 있는 생활 인프라","주민이 지역의 결정에 참여하고 의견을 반영할 수 있는 주민 참여","자연과 환경을 지키며 살아갈 수 있는 지속가능한 환경","나이·성별·배경과 관계없이 함께 살아갈 수 있는 다양성과 포용성","새로운 아이디어와 시도를 해볼 수 있는 도전과 실험의 기회","문화·예술·모임 등을 누릴 수 있는 풍부한 일상"]},
+ {t:"신청 경로와 참여 기대"},
+ {id:"how",label:"SIR대회를 어떻게 알고 신청하게 되었나요? (모두 선택)",type:"check",req:1,other:1,opts:["희망제작소 채널(홈페이지, 뉴스레터, 인스타그램, 페이스북, 카카오톡 플러스친구)","희망제작소 행사(SOVAC, 강연, 토론회, 포럼, 후원행사 등)","소셜섹터 플랫폼(오렌지레터, 임팩트얼라이언스 등)","중간지원조직 플랫폼(공익활동지원센터, 마을공동체센터, 청년센터 등)","시민사회·사회적경제 플랫폼(시민사회연대회의, 사회적기업포털 등)","대학생/청년 커뮤니티(열고닫기 등)","미디어/뉴스(오마이뉴스, 라이프인, 한겨레 등)","검색(네이버, 구글, 블로그 등)","창업 관련 커뮤니티","지인 소개/추천"]},
+ {id:"why",label:"SIR대회를 신청한 이유는 무엇인가요? (최대 3개)",type:"check",req:1,max:3,other:1,opts:["작년(또는 이전) SIR대회 참여 경험이 좋았어서","시민이 직접 사회적가치에 투자하는 경험을 해보고 싶어서","소셜디자이너의 이야기를 직접 듣고 만나고 싶어서","지역·사회문제를 해결하는 새로운 사례를 발견하고 싶어서","내가 중요하게 생각하는 가치와 투자 기준을 생각해보고 싶어서","비슷한 관심을 가진 시민들과 만나고 싶어서","희망제작소의 활동이나 행사가 궁금해서","지인·기관의 추천이나 초대를 받아서"]},
+ {id:"ask",label:"[선택] 행사 주최 측에 요청할 점이나 궁금한 점이 있으신가요?",hint:"예) 행사장 경사로 또는 엘리베이터 유무 등",type:"area"},
+ {id:"news",label:"[선택] 희망제작소 뉴스레터를 신청하시겠어요?",hint:"뉴스레터에서는 다음 SIR대회와 소셜디자이너 소식, 사회혁신 관련 콘텐츠를 전해드립니다.",type:"radio",opts:["네, 이메일로 보내주세요.","이미 받고 있습니다.","아니요, 안 받겠습니다."]}
+];
+const $=s=>document.querySelector(s),out=$("#out");
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const o=S.find(q=>q.id==="org");o.hint="명찰에 표기됩니다. 표기를 원치 않으시면 빈 칸으로 두시면 됩니다.";delete o.req;
+let h="";
+S.forEach(q=>{
+ if(q.t){h+=`<div class="sec"><h2>${q.t}</h2>${q.d?`<p>${q.d}</p>`:""}</div>`;return}
+ const star=q.req?'<span class="req" aria-hidden="true">*</span>':"";
+ h+=`<fieldset class="q" data-id="${q.id}"><legend>${esc(q.label)}${star}${q.hint?`<span class="hint">${esc(q.hint)}</span>`:""}</legend>`;
+ if(q.detail)h+=`<details class="detail"><summary>내용 자세히 보기</summary><div>${q.detail}</div></details>`;
+ if(q.type==="text"||q.type==="tel"||q.type==="email")h+=`<input type="${q.type}" name="${q.id}" ${q.ph?`placeholder="${q.ph}"`:""} ${q.type==="tel"?'inputmode="numeric" autocomplete="tel"':""} ${q.type==="email"?'autocomplete="email"':""} aria-label="${esc(q.label)}">`;
+ else if(q.type==="area")h+=`<textarea name="${q.id}" aria-label="${esc(q.label)}"></textarea>`;
+ else if(q.type==="likert"){
+  q.rows.forEach((r,i)=>{h+=`<div class="lk"><p>${esc(r)}</p><div class="pills">${[1,2,3,4,5].map(n=>`<label class="pill"><input type="radio" name="lk${i}" value="${n}"><span>${n}</span></label>`).join("")}</div><div class="ends"><span>전혀 그렇지 않다</span><span>매우 그렇다</span></div></div>`});
+ } else {
+  const t=q.type,it=t==="check"?"checkbox":t;
+  q.opts.forEach((o,i)=>{h+=`<label class="opt"><input type="${it}" name="${q.id}" value="${esc(o)}"><span class="o">${t==="check"?`<b class="no">${i+1}</b>`:""}${esc(o)}</span></label>`});
+  if(q.other){h+=`<label class="opt"><input type="${it}" name="${q.id}" value="__other"><span class="o">${t==="check"?`<b class="no">${q.opts.length+1}</b>`:""}기타</span></label><input type="text" class="oth" name="${q.id}_other" placeholder="직접 입력" aria-label="기타 직접 입력">`}
+  if(q.max)h+=`<div class="counter" data-c="${q.id}">0 / ${q.max}개 선택</div>`;
+ }
+ if(q.id==="c1")h+=`<div class="stop" id="stop">개인정보 수집·이용에 동의하지 않으면 참가 신청이 제한됩니다.</div>`;
+ h+=`<div class="msg" role="alert"></div></fieldset>`;
+});
+out.innerHTML=h;
+
+// 기타 입력창 토글 + 최대 선택 수 제한
+S.filter(q=>q.id&&(q.type==="radio"||q.type==="check")).forEach(q=>{
+ const fs=$(`[data-id="${q.id}"]`),oth=fs.querySelector(".oth");
+ fs.addEventListener("change",()=>{
+  const inputs=[...fs.querySelectorAll(`input[name="${q.id}"]`)],on=inputs.filter(i=>i.checked);
+  if(oth){const o=on.some(i=>i.value==="__other");oth.classList.toggle("show",o);if(o&&document.activeElement!==oth&&q.type==="radio")oth.focus()}
+  if(q.max){inputs.forEach(i=>{const off=!i.checked&&on.length>=q.max;i.disabled=off;i.closest(".opt").classList.toggle("off",off)});
+   fs.querySelector(".counter").textContent=`${on.length} / ${q.max}개 선택`}
+  if(q.id==="c1")$("#stop").style.display=on.some(i=>i.value.includes("동의하지"))?"block":"none";
+  fs.classList.remove("err");
+ });
+});
+document.querySelectorAll("input[type=text],input[type=tel],input[type=email]").forEach(i=>i.addEventListener("input",()=>i.closest("fieldset")?.classList.remove("err")));
+
+function fail(fs,m){fs.classList.add("err");fs.querySelector(".msg").textContent=m;return fs}
+$("#f").addEventListener("submit",e=>{
+ e.preventDefault();
+ const f=e.target,fd=new FormData(f),bad=[];
+ S.forEach(q=>{
+  if(!q.id)return;
+  const fs=$(`[data-id="${q.id}"]`);fs.classList.remove("err");
+  if(q.type==="likert"){if(q.rows.some((_,i)=>!fd.get("lk"+i)))bad.push(fail(fs,"모든 문장에 응답해 주세요."));return}
+  const v=q.type==="check"?fd.getAll(q.id):fd.get(q.id);
+  const empty=q.type==="check"?!v.length:!v||!String(v).trim();
+  if(q.req&&empty){bad.push(fail(fs,q.type==="text"||q.type==="tel"||q.type==="email"?"필수 입력 항목입니다.":"하나 이상 선택해 주세요."));return}
+  const vals=q.type==="check"?v:[v];
+  if(q.other&&vals.includes("__other")&&!(fd.get(q.id+"_other")||"").trim()){bad.push(fail(fs,"기타 내용을 입력해 주세요."));return}
+  if(q.id==="tel"&&!/^010-\d{4}-\d{4}$/.test(v.trim()))bad.push(fail(fs,"010-0000-0000 형식으로 입력해 주세요."));
+  if(q.id==="mail"&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()))bad.push(fail(fs,"이메일 주소 형식을 확인해 주세요."));
+  if(q.id==="c1"&&String(v).includes("동의하지"))bad.push(fail(fs,"개인정보 수집·이용에 동의하셔야 신청할 수 있습니다."));
+ });
+ const m=$("#formmsg");
+ if(bad.length){m.style.display="block";m.textContent=`확인이 필요한 항목이 ${bad.length}개 있습니다.`;bad[0].scrollIntoView({behavior:"smooth",block:"center"});return}
+ m.style.display="none";
+ const pick=id=>{const q=S.find(x=>x.id===id),other=(fd.get(id+"_other")||"").trim();
+  if(q.type==="check")return fd.getAll(id).map(x=>x==="__other"?"기타: "+other:x);
+  const v=fd.get(id)||"";return v==="__other"?"기타: "+other:v};
+ const data={
+  c1:fd.get("c1"),c2:fd.get("c2"),c3:fd.get("c3"),
+  name:(fd.get("name")||"").trim(),org:(fd.get("org")||"").trim(),
+  tel:(fd.get("tel")||"").trim(),mail:(fd.get("mail")||"").trim(),
+  age:pick("age"),gender:pick("gender"),region:pick("region"),field:pick("field"),
+  lk:[0,1,2,3,4,5].map(i=>fd.get("lk"+i)),
+  key:pick("key"),cond:pick("cond"),how:pick("how"),why:pick("why"),
+  ask:(fd.get("ask")||"").trim(),news:pick("news")
+ };
+ const btn=f.querySelector("button.go");btn.disabled=true;btn.textContent="제출 중...";
+ const reset=()=>{btn.disabled=false;btn.textContent="제출하기"};
+ const showErr=t=>{m.style.display="block";m.textContent=t;reset()};
+ fetch(API_URL,{method:"POST",body:JSON.stringify(data)})
+  .then(r=>r.json())
+  .then(res=>{
+   if(!res.ok){showErr("제출 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요. 계속되면 사회혁신팀(02-6395-1433)으로 문의해 주세요.");return}
+   if(res.result==="duplicate"){showErr("이미 신청하셨습니다. 신청 시 입력하신 이메일로 발송된 안내 메일을 확인해 주세요.");return}
+   if(res.result==="대기")$("#doneh").textContent="대기 명단에 등록되었습니다";
+   f.style.display="none";
+   const d=$("#done");d.style.display="block";d.classList.add("show");
+   d.scrollIntoView({behavior:"smooth",block:"start"});
+  })
+  .catch(()=>showErr("네트워크 오류로 제출하지 못했습니다. 인터넷 연결을 확인하고 다시 시도해 주세요."));
+});
+</script>
+</body>
+</html>
